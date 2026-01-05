@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: 140ms ease-in-out;
+    color: white;
+}
+*::selection {
+    color: rgb(38, 255, 0);
+}
+section {
+    display: flex;
+    justify-content: center;
+}
+body {
+    background: url(photos/main_back.jpg);
+    background-size:200%;
+    height: 140vh;
+    animation: bgani 120s linear infinite;
+}
+aside>div, aside>h2, article {
+    backdrop-filter: blur(15px) brightness(50%);
+    border: 1.5px white solid;
+    color: white;
+}
+article {
+    width: 50%;
+    margin: 30px;
+    padding: 50px;
+    border-radius: 25px;
+    height: fit-content;
+}
+article>h2, article>p {
+    text-align: center;
+}
+header {
+    border-bottom: 2px solid white;
+    display: flex;
+    height: 88px;
+    width: 100%;
+    backdrop-filter: blur(15px) brightness(30%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    z-index: 1;
+}
+header>div {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin-top: 10px;
+    text-wrap:nowrap;
+}
+header>div>h1 {
+    font-size: 2.3vw;
+}
+header>div>p {
+    text-align: center;
+    font-size: 1vw;
+}
+header>nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    margin-right: 9px;
+    width: 80%;
+    height: 100%;
+}
+header>nav>a {
+    font-size: 2vh;
+    margin-left: 2px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+header>nav>a:active {
+    scale: 1.1;
+    filter:contrast(67%);
+}
+header>nav>a:hover {
+    text-shadow: 0 0 10px white;
+}
+header>img {
+    width: 67px;
+    border-radius: 20px;
+    margin: 14px;
+}
+figure>a>img {
+    width: 16vh;
+    border-radius: 15px;
+    filter: grayscale(100%);
+    transition: 150ms ease-out;
+}
+aside>div>figure {
+    text-align: center;
+}
+figcaption {
+    opacity: 0;
+    transition: 100ms ease-out;
+    color: white;
+}
+aside>div {
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px;
+    margin-top: 15px;
+    margin-left: 0;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    transition: 150ms ease-out;
+}
+aside>h2 {
+    width: 15vw;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+}
+aside>div>figure>a>img:hover {
+    scale: 1.25;
+    filter: none;
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px rgb(163, 163, 163));
+    animation: spin 4s ease-in-out infinite;
+}
+a:has(>img:hover) + figcaption {
+    opacity: 1;
+    font-size: 120%;
+    margin-top: 25px;
+}
+aside>div>figure>a>img:active {
+    scale: 1.2;
+    filter:contrast(67%);
+}
+aside, article {
+    margin-top: 150px;
+}
+aside>h2, aside>div, article {
+    box-shadow: 0 0 10px white;
+}
+footer {
+    background-color: rgb(0, 0, 0);
+    margin-top: 120px;
+    padding: 10px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+@keyframes spin {
+    0% {rotate: -4deg;}
+    25% {rotate: 4deg;}
+    50% {rotate: -4deg;}
+    75% {rotate: 4deg;}
+    100% {rotate: -4deg;}
+}
+@keyframes bgani {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
+}
