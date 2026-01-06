@@ -13,7 +13,7 @@ section {
     justify-content: center;
 }
 body {
-    background: url(photos/main_back.jpg);
+    background: url(main_back.jpg);
     background-size:200%;
     height: 140vh;
     animation: bgani 120s linear infinite;
@@ -161,4 +161,5 @@ footer {
     0% {background-position: left;}
     50% {background-position: right;}
     100% {background-position: left;}
+
 }
